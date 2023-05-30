@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --white:hsl(0, 0%, 100%);
+    --light-gray:hsl(217, 12%, 63%);
+    --medium-gray:hsl(216, 12%, 54%);
+    --dark-blue:hsl(213, 19%, 18%);
+    --very-dark-blue:hsl(216, 12%, 8%);
+    --orange:hsl(25, 97%, 53%);
+
+}
+html{
+    font-size:62.5%;
+    box-sizing: border-box;
+}
+
+*{
+    margin:0rem;
+    padding:0rem;
+    font-family: Overpass, sans-serif;
+}
+body{
+    background-color: var(--very-dark-blue);
+    height:100vh;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height:100%;
+}
+
+.card-container{
+    background:linear-gradient(to bottom,rgb(34, 41, 50),rgb(23, 28, 38));
+    width:30rem;
+    border-radius:2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+    padding:2.5rem;
+}
+
+#card-image{
+    background-color: rgb(42, 48, 59);
+    padding:1rem;
+    border-radius:50%;
+    margin-bottom:1.5rem;
+}
+
+h1{
+    color:white;
+    margin-bottom:1.5rem;
+    font-size:2.7rem;
+    font-weight:500;
+}
+h2{
+    color:var(--white);
+    font-size: 2.5rem;
+}
+
+p{
+    font-size:1.5rem;
+    color:var(--medium-gray);
+    line-height: 2.3rem;
+}
+#submit{
+    width:29rem;
+    height:4.8rem;
+    border-radius:3rem;
+    text-transform: uppercase;
+    background-color: var(--orange);
+    color:white;
+    letter-spacing: 0.3rem;
+    font-size:1.5rem;
+    margin-bottom:1rem;
+    border:none;
+}
+#submit:hover{
+    background-color:var(--white);
+    color:var(--orange);
+}
+
+#card-numbers{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+.rating{
+    background-color:var(--dark-blue);
+    border:none;
+    outline:none;
+    width:4.5rem;
+    height:4.5rem;
+    border-radius: 50%;
+    color:var(--medium-gray);
+    font-size:1.5rem;
+}
+.rating:hover{
+    background-color: var(--light-gray);
+    color:var(--white);
+}
+.rating:focus{
+background-color: var(--orange);
+color:var(--white);
+}
+#rating{
+    color:var(--orange);
+    padding:0.5rem 1.5rem;
+    background-color: var(--dark-blue);
+    border-radius:3rem;
+}
+.confirmation p{
+    text-align: center;
+}
+#card-confirmation{
+    display:none;
+}
