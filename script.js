@@ -25,3 +25,21 @@ submitButton.addEventListener('click', () => {
   const selectedRating = starSpan.textContent;
   ratingParagraph.textContent = `You selected ${selectedRating} out of 5 stars.`;
 });
+
+ratingButtons.forEach(function(button) {
+  // Add a click event listener to each rating button
+  button.addEventListener("click", function() {
+    // Get the value of the clicked rating button
+    var ratingValue = parseInt(button.textContent);
+
+    // Get the paragraph with the id "card-message"
+    var cardMessage = document.getElementById("card-message");
+
+    // Check if the rating is 3 or below
+    if (ratingValue <= 3) {
+      // Change the text content of the card message paragraph
+      cardMessage.textContent =
+        "We apologise for any possible inconveniences suffered. Please let us know about any encountered issues by getting in touch with us.";
+    }
+  });
+});
